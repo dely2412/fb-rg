@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 
 // Đây là đoạn code để tạo Webhook
 app.get('/webhook', function(req, res) {
-  if (req.query['hub.verify_token'] === 'fanpage_coop_rach_gia') {
+  if (req.query['hub.verify_token'] === 'facebookchat') {
     res.send(req.query['hub.challenge']);
   }
   res.send('Error, wrong validation token');
